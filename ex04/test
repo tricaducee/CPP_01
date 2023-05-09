@@ -1,0 +1,16 @@
+Pour réaliser ce programme en C++98, vous pouvez utiliser les bibliothèques suivantes :
+
+<iostream> : Pour les entrées et sorties standard.
+<fstream> : Pour les opérations de fichiers (lire/écrire).
+<string> : Pour manipuler les chaînes de caractères.
+Voici quelques idées pour vous aider à concevoir le programme :
+
+Utilisez std::ifstream pour ouvrir le fichier d'entrée (<filename>) en mode lecture et vérifiez si le fichier est bien ouvert.
+Utilisez std::ofstream pour créer et ouvrir le fichier de sortie (<filename>.replace) en mode écriture. Vérifiez également si le fichier est bien ouvert.
+Lisez le fichier d'entrée ligne par ligne en utilisant une boucle while et std::getline. Pour chaque ligne, effectuez l'opération de remplacement des occurrences de s1 par s2.
+Pour remplacer les occurrences de s1 par s2 sans utiliser la fonction replace, vous pouvez utiliser les fonctions membres find() et substr() de la classe std::string. Parcourez la ligne avec une boucle while et recherchez s1. Si s1 est trouvé, utilisez substr() pour découper la chaîne de caractères avant et après s1, puis insérez s2 entre les deux parties. Répétez cette opération jusqu'à ce qu'il n'y ait plus d'occurrences de s1 dans la ligne.
+Écrivez la ligne modifiée dans le fichier de sortie.
+Gérez les erreurs et les entrées inattendues en utilisant des instructions try et catch, ou en vérifiant les conditions d'erreur (par exemple, si le fichier ne s'ouvre pas correctement).
+Fermez les fichiers à la fin du traitement.
+Créez des tests pour vérifier que votre programme fonctionne correctement. Vous pouvez créer des fichiers d'entrée avec différentes occurrences de s1 et vérifier si le fichier de sortie contient les remplacements attendus.
+En suivant ces étapes et en utilisant les bibliothèques et fonctions suggérées, vous devriez être en mesure de concevoir un programme répondant aux exigences données.
